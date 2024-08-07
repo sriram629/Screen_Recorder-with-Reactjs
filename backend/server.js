@@ -5,11 +5,12 @@ const multer = require("multer");
 const { Readable } = require("stream");
 const path = require("path");
 const cors = require("cors");
-
+const bodyparser = require("body-parser");
 const app = express();
 const PORT = 3500;
 
 app.use(cors());
+app.use(bodyparser.json());
 
 mongoose
   .connect(
@@ -46,6 +47,7 @@ app.post("/upload", upload.single("video"), (req, res) => {
 
   const readableVideoStream = new Readable();
   readableVideoStream.push(req.file.buffer);
+  console.log(req.file.buffer);
   readableVideoStream.push(null);
 
   const filename =
