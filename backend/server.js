@@ -13,11 +13,7 @@ app.use(cors());
 
 mongoose
   .connect(
-    "mongodb+srv://sriram:sri@5728Q@cluster0.hctmnsr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
+    "mongodb+srv://sriram:sri5728Q@cluster0.hctmnsr.mongodb.net/screenrecorder?retryWrites=true&w=majority"
   )
   .then(() => {
     console.log("MongoDB connected successfully");
