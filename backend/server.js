@@ -7,7 +7,7 @@ const path = require("path");
 const cors = require("cors");
 
 const app = express();
-const PORT = 5000;
+const PORT = 3500;
 
 app.use(cors());
 
@@ -36,9 +36,10 @@ conn.once("open", () => {
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
-app.get("/"),(req,res)=>{
-  res.send("Hello");
-}
+app.get("/"),
+  (req, res) => {
+    res.send("Hello");
+  };
 
 app.post("/upload", upload.single("video"), (req, res) => {
   if (!req.file) {
