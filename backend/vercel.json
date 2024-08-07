@@ -13,6 +13,6 @@
     }
   ],
   "env": {
-    "MONGO_URI": "mongodb://localhost:27017/screenrecorder"
+    "MONGO_URI": "mongodb+srv://sriram:sri@5728Q@cluster0.hctmnsr.mongodb.net/screen_recorder?retryWrites=true&w=majority&appName=Cluster0"
   }
 }
