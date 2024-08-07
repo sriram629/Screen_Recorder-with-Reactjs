@@ -13,7 +13,7 @@ app.use(cors());
 
 mongoose
   .connect(
-    "mongodb+srv://sriram:sri@5728Q@cluster0.hctmnsr.mongodb.net/screen_recorder?retryWrites=true&w=majority&appName=Cluster0",
+    "mongodb+srv://sriram:sri@5728Q@cluster0.hctmnsr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
