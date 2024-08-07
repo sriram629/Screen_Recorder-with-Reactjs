@@ -36,10 +36,9 @@ conn.once("open", () => {
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
-app.get("/"),
-  (req, res) => {
-    res.send("Hello");
-  };
+app.get("/", (req, res) => {
+  res.send("Hello");
+});
 
 app.post("/upload", upload.single("video"), (req, res) => {
   if (!req.file) {
