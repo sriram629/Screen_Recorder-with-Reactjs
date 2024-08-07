@@ -44,7 +44,7 @@ function App() {
     formData.append("video", blob, "recording.webm");
     try {
       await axios.post(
-        "https://sriram629-screen-recorder-with-reactjs-zgdp.vercel.app/upload",
+        "https://screen-recorder-with-reactjs-pqxl.vercel.app/upload",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
