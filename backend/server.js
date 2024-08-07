@@ -12,10 +12,13 @@ const PORT = 3500;
 app.use(cors());
 
 mongoose
-  .connect("mongodb://localhost:27017/screenrecorder", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "mongodb+srv://sriram:sri@5728Q@cluster0.hctmnsr.mongodb.net/screen_recorder?retryWrites=true&w=majority&appName=Cluster0",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => {
     console.log("MongoDB connected successfully");
   })
